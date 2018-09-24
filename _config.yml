@@ -7,7 +7,7 @@ description: "do you will do will do"
 keyword: "BY, BY Blog, Mr.Huang, EmotionalXX, 闲鱼, 数通, OSPF, IS-IS"
 url: "http://www.freefish.ml"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/EmotionalXX/EmotionalXX.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
