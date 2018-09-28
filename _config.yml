@@ -4,7 +4,7 @@ SEOTitle: Mr.Huang | Blog    #浏览器搜索时的标题
 header-img: img/home-bg-o.jpg   #主题图片
 email: 1224687085@qq.com
 description: "do you will do will do"
-keyword:"BLOG，Mr.Huang, EmotionalXX，数通, OSPF, IS-IS"
+keyword: "BLOG，Mr.Huang, EmotionalXX，数通, OSPF, IS-IS"
 url: "http://www.freefish.ml"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/EmotionalXX/EmotionalXX.github.io.git" # you code repository
