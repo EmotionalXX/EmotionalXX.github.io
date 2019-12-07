@@ -4,8 +4,8 @@ SEOTitle: Mr.Huang | Blog    #浏览器搜索时的标题
 header-img: img/home-bg-o.jpg   #主题图片
 email: 1224687085@qq.com
 description: "do you will do will do"
-keyword: "BLOG，Mr.Huang, EmotionalXX，数通, OSPF, IS-IS"
-url: "http://www.freefish.ml"          # your host, for absolute URL
+keyword: "BLOG，Mr.Huang, EmotionalXX"
+url: "http://www.huangsz.xyz"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/EmotionalXX/EmotionalXX.github.io.git" # you code repository
 
@@ -103,10 +103,7 @@ friends: [
         href: "https://blog.csdn.net/qq_40205107/article/details/79562074"
     },{
         title: "Mr.Huang",
-        href: "http://www.freefish.ml"
-    },{
-        title: "Huawei",
-        href: "https://www.huawei.com/cn/"
+        href: "http://www.huangsz.xyz"
     },{
         title: "helper",
         href: "https://www.jianshu.com/p/e68fba58f75c"
