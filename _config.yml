@@ -62,8 +62,8 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: 657e48be0d5cd5538943                            #生成的clientID
-  clientSecret: 323605650d90080257fa5306f28dc0d5785b0f3a    #生成的clientSecret
+  clientID: 0fd2eaf34f257f8db00a                            #生成的clientID
+  clientSecret: 5aedc03690459516e76b4507fa4299c8ebf2320f    #生成的clientSecret
   repo: EmotionalXX.github.io    #仓库名称
   owner: EmotionalXX    #github用户名
   admin: EmotionalXX
