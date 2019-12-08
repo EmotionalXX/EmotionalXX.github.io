@@ -42,7 +42,11 @@ GoogLeNet网络模型的最重要的部分就是Inception模块，可以说，Go
 
 [![Qd04VP.md.jpg](https://s2.ax1x.com/2019/12/09/Qd04VP.md.jpg)](https://imgse.com/i/Qd04VP)
 
-其中classify_image_graph_def.pb 文件就是训练好的Inception-v3模型; imagenet_synset_to_human_label_map.txt是类别文件
+其中
+
+classify_image_graph_def.pb 文件就是训练好的Inception-v3模型; 
+
+imagenet_synset_to_human_label_map.txt是类别文件
 
 ### 加载模型
 
@@ -156,8 +160,6 @@ sess.close()
 
 ### 测试数据
 
-#### 测试效果
-
 测试图片：
 
 [![QYHIoQ.md.jpg](https://s2.ax1x.com/2019/12/07/QYHIoQ.md.jpg)](https://imgse.com/i/QYHIoQ)
@@ -169,8 +171,12 @@ sess.close()
 
 `测试文件夹内的多张图片`
 
-1. 将image指定到文件夹位置
-2. 修改如下：
+1. 将image指定到文件夹位置，修改为
+
+	image = '/mnt/hgfs/share/tf/test_image/'
+
+	
+2. 读取文件夹内的图像，依次读取一张，并测试分类效果。
 ```
 pathDir = os.listdir(image_local)
 for image in pathDir:
@@ -195,7 +201,6 @@ for image in pathDir:
     sess.close()
 ```
 
-#### 测试效果：
 
 测试图片：
 
