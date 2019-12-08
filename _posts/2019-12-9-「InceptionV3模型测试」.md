@@ -34,7 +34,7 @@ GoogLeNet网络模型的最重要的部分就是Inception模块，可以说，Go
 
 
 ## InceptionV3实战
-感谢@[超自然祈祷的整理](https://blog.csdn.net/sinat_27382047/article/details/80534234/)）
+感谢@[超自然祈祷的整理](https://blog.csdn.net/sinat_27382047/article/details/80534234/)
 
 ###获取训练好的模型文件
 
@@ -199,7 +199,8 @@ for image in pathDir:
 
 ![QdDUTx.png](https://s2.ax1x.com/2019/12/09/QdDUTx.png)
 
-测试结果如下：值
+测试结果如下：
+
 [![QdD0fO.md.jpg](https://s2.ax1x.com/2019/12/09/QdD0fO.md.jpg)](https://imgse.com/i/QdD0fO)
 
 >我修改成了TOP1的类别概率值
