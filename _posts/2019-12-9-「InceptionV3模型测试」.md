@@ -3,7 +3,7 @@ layout:     post
 title:      利用已训练好的InceptionV3模型进行测试自己的图像数据集
 subtitle:   环境:Ubuntu18.04 TensorFlow1.12-CPU python3.7 
 date:       2019-12-109
-author:     BY
+author:     Mr.Huang
 header-img: img/post-bg-hacker.jpg
 catalog: true
 tags:
