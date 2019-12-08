@@ -36,7 +36,7 @@ GoogLeNet网络模型的最重要的部分就是Inception模块，可以说，Go
 ## InceptionV3实战
 感谢@[超自然祈祷的整理](https://blog.csdn.net/sinat_27382047/article/details/80534234/)
 
-###获取训练好的模型文件
+### 获取训练好的模型文件
 
 **模型和pbtxt文件：** <https://github.com/taey16/tf/tree/master/imagenet/>
 
@@ -44,7 +44,7 @@ GoogLeNet网络模型的最重要的部分就是Inception模块，可以说，Go
 
 其中classify_image_graph_def.pb 文件就是训练好的Inception-v3模型; imagenet_synset_to_human_label_map.txt是类别文件
 
-###加载模型
+### 加载模型
 
 先创建一个类NodeLookup来将softmax概率值映射到标签上,然后创建一个函数create_graph()来读取模型。详细代码如下：
 
@@ -154,9 +154,9 @@ sess.close()
 	model_dir = '/mnt/hgfs/share/tf/model/'
 	image = '/mnt/hgfs/share/tf/test_image/cat.jpg'
 
-###测试数据
+### 测试数据
 
-####测试效果
+#### 测试效果
 
 测试图片：
 
@@ -195,7 +195,7 @@ for image in pathDir:
     sess.close()
 ```
 
-####测试效果：
+#### 测试效果：
 
 测试图片：
 
