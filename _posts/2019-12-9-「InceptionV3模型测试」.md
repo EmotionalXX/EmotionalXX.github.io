@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      利用已训练好的InceptionV3模型进行测试自己的图像数据集
-subtitle:   环境:Ubuntu18.04 TensorFlow1.12-CPU python3.7 
+subtitle:   环境:Ubuntu18.04 TensorFlow1.13-CPU python3.7 
 date:       2019-12-09
 author:     Mr.Huang
 header-img: img/post-bg-hacker.jpg
@@ -14,7 +14,7 @@ tags:
 ---
 
 # 前言
-本节内容主要是利用虚拟机内的 **Ubuntu18.04** 和 **tensorflow1.12** 进行操作。
+本节内容主要是利用虚拟机内的 **Ubuntu18.04** 和 **tensorflow1.13** 进行操作。
 
 网络模型是inceptionV3，由于是穷学生，没有设备自己跑，就用的别人已经训练好的。
 
