@@ -16,7 +16,7 @@ tags:
 # 前言
 本节内容主要是利用虚拟机内的 **Ubuntu18.04** 和 **tensorflow1.12** 进行操作。
 
-网络模型是inceptionV3，由于是穷汉学生，没有设备自己跑一遍，就用的别人已经训练好的。
+网络模型是inceptionV3，由于是穷学生，没有设备自己跑，就用的别人已经训练好的。
 
 # 正文
 
@@ -27,7 +27,7 @@ tags:
 
 >GoogLeNet是谷歌（Google）研究出来的深度网络结构，为什么不叫“GoogleNet”，而叫“GoogLeNet”，据说是为了向“LeNet”致敬，因此取名为“GoogLeNet”
 
-GoogLeNet网络模型的最重要的部分就是Inception模块，可以说，GoogLeNet就是由多个Inception模块堆叠而成。在GoogLeNet模型中，Inception模块是Inception V1。它的网络模型如下：
+GoogLeNet网络模型的最重要的部分就是Inception模块，可以说，GoogLeNet就是由多个Inception模块堆叠而成。在GoogLeNet模型中，Inception模块是Inception V1。
 
 
 
