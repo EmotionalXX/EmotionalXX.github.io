@@ -8,7 +8,6 @@ header-img: img/2019.12.19.jpg
 catalog: true
 tags:
     - Python
-    
 ---
 
 # 前言
@@ -24,26 +23,83 @@ tags:
 	
 	证明所有防御方法有存在泛化限制，这是一个本质属性
 
-## 模块
+### 模块
+
 **模块是程序的集合体**
+
 	import max 导入模块max
 	from max import func_max #从max模块中仅导入func_max函数
 	from max import *  #从max模块中导入所有函数
 	import max as m #导入max，用as指定max的别名mm
+	import os
+	print(os.getcwd()) #获取当前文件所在路径
+
+### 类基础
+
+类是面向对象的基础，一系列相似属性的事物归为一类。  属性(基本特征)和方法(函数)
+
+'''
+class human: #类  包含初始化(本征属性)和方法    有什么？ 做什么？
+    #初始化(在创建对象时会执行)
+    def __init__(self,name='someone',age=10):
+        self.name = name
+        self.age = age
+        print('human init')
+    def my_name(self):
+        print('my name is', self.name)
+    def my_age(self):
+        print('my age is:',self.age)
+    def think(self,a,b):
+        print(a+b)
+
+class student(human):  #子类继承父类
+    def __init__(self,grade=1,school='MIT'):
+        # 继承父类的初始化
+        super().__init__()  #父类的属性必须super才能使用，而方法自动继承, 添加子类自己的属性
+        self.grade=grade
+        self.school=school
+        self.score=100
+        print('student init')
+    #自动继承父类的方法，添加子类自己的方法
+    def learn(self):
+        print('learning')
+    def my_school(self):
+        print('my schoool is',self.school)
+    def think(self,a,b):    #子类可以重写父类的方法
+        print(a*b)
+stu1=student()
+stu2=student(4)
+print(stu1.grade)  #使用的是默认的1
+print(stu2.grade)  #传入的参数是4，即更新了grad参数，由默认的1变为4
+print(stu1.name)
+
+#首先执行父类的初始化，然后执行子类的初始化，方法是自动继承的，子类可以重写父类的方法
+
+stu3=student()
+stu3.think(1,0)
+
+'''
+
+**类的继承要点：**
+
+首先执行父类的初始化，然后执行子类的初始化，方法是自动继承的，子类可以重写父类的方法
+
+###输入——Input
+
+number = input('Please input a number:')  #输入的数字为 字符
+if int(number) == 1:
+    print("you have input number 1")
+elif number == '2':
+    print('you have input number 2')
+else:
+    print('bingo!')
+
+**小知识**：注释一段代码可用以下两种方法，''' 代码''' 或 ctrl+？ 
 
 
-import os
-print(os.getcwd()) #获取当前文件所在路径
 
 
 
-### 对抗样本的生成
-
-+ 2013年Szegedy提出假设：对抗样本的存在是因为深度神经网络模型高度非线性的结果
-+ 2014年Goodfellow推翻了Szegedy的假设，认为原因应该是过于线性。随后提出对抗样本的生成方法FGSM和LLCM(后来演变为TGSM,作者Kurakin）
-+ 2015年Papernot提出JSMA（计算每个像素的显著性得分，选择得分最高的像素进行扰动），可将对抗样本的标签进行指定 
-+ 2016年Szegedy指出对抗样本在不同神经网络模型之间具有迁移性
-+ 2016年Papernot指出更糟糕的是对抗样本在不同机器学习技术上是可迁移的，如CNN、SVM和逻辑回归
 
 ### 对抗样本的防御
 
