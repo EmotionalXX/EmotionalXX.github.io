@@ -16,13 +16,9 @@ tags:
 
 ## 学习内容
 
-
-	模块
+	模块、类基础、类的继承、输入Input、文件读写、异常处理、Json数据存储
 	
-	证明该分类器在第二轮对抗攻击中是具有鲁棒性的
 	
-	证明所有防御方法有存在泛化限制，这是一个本质属性
-
 ### 模块
 
 **模块是程序的集合体**
@@ -80,12 +76,13 @@ stu3.think(1,0)
 
 '''
 
-**类的继承要点：**
+**类的继承**
 
 首先执行父类的初始化，然后执行子类的初始化，方法是自动继承的，子类可以重写父类的方法
 
-###输入——Input
+### 输入——Input
 
+'''
 number = input('Please input a number:')  #输入的数字为 字符
 if int(number) == 1:
     print("you have input number 1")
@@ -93,72 +90,70 @@ elif number == '2':
     print('you have input number 2')
 else:
     print('bingo!')
+'''
 
 **小知识**：注释一段代码可用以下两种方法，''' 代码''' 或 ctrl+？ 
 
+### 文件读写
+
+'''
+
+# 写入文件 'w' (清洗文件，然后重写）
+with open('file1.txt','w') as f1:
+	f1.write('hello,world')
+# 追加内容 'a' (在原文件末尾添加新内容）
+with open('file1.txt','a') as f1:
+	f1.write('hello,world')
+# 读取文件 'r' (读取文件：
+with open('file1.txt','r') as f1:
+    content=f1.read() #读取全部内容
+    content=f1.readline() #读取第一行的内容
+    content=f1.readlines() #读取所有行的内容，并存放到一个列表中
+# 注意，这三者是彼此不兼容的！
+
+with open('file.txt') as f:
+    for line in f:
+        print(line.rstrip())  #去除空行
+'''
+
+### 异常处理
+
+'''
+#file=open('hhh','r+') #先读文件，如果能打开的话，则写入
+try:
+    file = open('hhh','r+')
+except Exception as e:
+    print(e)
+    response = input('Do you want to creat it:')
+    if(response=='yes'):
+        with open('hhh','w') as f:
+            pass
+        print('The file was created successful')
+    else:
+        pass
+else:
+    file.write('hhhhhhhhhhhhhhhhhhhhh')
+    file.close()
+'''
+
+### Json数据存储
+'''
+import json
+a_dict={'user_id':'a','user_name':'hello',100:200} #字典写法
+with open('example.json','w') as f:
+    json.dump(a_dict,f) #写入/保存数据
+
+with open('example.json') as f: 
+    content=json.load(f) #读取/加载数据
+    print(content)
+'''
 
 
 
 
 
-### 对抗样本的防
-
-+ 2016年Kurakin指出一些图像变换，如高斯噪声、高斯滤波器和JPEG压缩可以有效恢复80%以上的对抗样本
-+ Papernot提出防御性网络蒸馏
-+ Kurakin提出对抗训练
-
----
-
-## 实验操作——二分器
-
-1.利用模型f1训练干净样本，然后用模型f1通过攻击算法制作对抗样本
-
-2.建立二分器模型f2进行有监督训练，（干净样本标记为0，对抗样本标记为1）
-
-3.测试干净样本和对抗样本的识别准确率
-
-4.利用模型f2构建第二轮对抗测试数据，测试f2的鲁棒性
-
-本论文中的[二分器防御实验代码](https://github.com/gongzhitaao/adversarial-classifier)
-
-同时，[对抗样本的生成]( https://github.com/gongzhitaao/tensorflow-adversarial)
-
-打开adversarial-classifier项目，存在以下文件：
-
-[![l3K0d1.md.jpg](https://s2.ax1x.com/2019/12/31/l3K0d1.md.jpg)](https://imgchr.com/i/l3K0d1)
-
-我们需要在tensorflow-adversarial项目中导入攻击算法，将attacks文件夹拷贝到我们的项目中。
-
-我们以src/table_1_mnist 为例，**我的环境配置：**Ubuntu 18.04+Python3.7+tensorflow 1.12+keras 2.3.0
-
-由于笔者的环境和我的有些出入，故我将代码进行了以下更改
-
-	keras  =>  tensorflow.keras
-	from keras.utils import np_utils 删除该语句
-	np_utils.to_categorical  =>  tf.keras.utils.to_categorical
-	from attacks.fgsm import fgsm  => from attacks.fast_gradient import fgm
-
-训练结果如下：
-
-[![l31G79.md.png](https://s2.ax1x.com/2019/12/31/l31G79.md.png)](https://imgchr.com/i/l31G79)
 
 
-**实验结果**
 
-[![QLae4H.md.jpg](https://s2.ax1x.com/2019/12/19/QLae4H.md.jpg)](https://imgchr.com/i/QLae4H)
 
-实验表明：
 
-+ 对于测试的二分类方法，达到超过99%的准确率，同时对第二轮对抗攻击是具有鲁棒性的。
-
-+ FGSM与JSMA生成的对抗样本是不兼容的，而FGSM与TGSM生成的对抗样本是兼容的，即分类器训练FGSM对抗样本集，也能在TGSM对抗样本的分类上表现不错。
-
-**泛化限制**
-
-> 利用FGSM/TGSM生成的对抗样本训练的二分类器对超参数敏感
-
-> 对生成对抗样本的算法敏感
-
-# 结语
-
- > 本文首次发布于 [Mr.Huang Blog](http://www.huangsz.xyz), 作者 [@(Mr.Huang)](http://github.com/EmotionalXX) ,转载请保留原文链接.
