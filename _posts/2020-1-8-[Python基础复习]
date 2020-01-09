@@ -1,15 +1,18 @@
 ---
 layout:     post
-title:      [Python基础语法]
-subtitle:   Python
-date:       2019-1-08
+title:      [Python基础复习]
+subtitle:   Python学习
+date:       2020-1-8
 author:     Mr.Huang
 header-img: img/2019.12.19.jpg
 catalog: true
 tags:
-    - Python
+    - 论文阅读
+    - 对抗样本
+    - 对抗检测
+    - 二分类器
+    
 ---
-
 # 前言
 
 观看视频覃秉丰《Python入门》学习视频
