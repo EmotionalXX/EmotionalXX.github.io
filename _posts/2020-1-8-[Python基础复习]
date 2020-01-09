@@ -7,10 +7,7 @@ author:     Mr.Huang
 header-img: img/2019.12.19.jpg
 catalog: true
 tags:
-    - 论文阅读
-    - 对抗样本
-    - 对抗检测
-    - 二分类器
+    - python
     
 ---
 # 前言
