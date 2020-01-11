@@ -121,8 +121,8 @@ ax.spines['left'].set_position(('data',0)) #设置left对应的零点
 
 plt.show()
 
-![lIoWvR.jpg](https://s2.ax1x.com/2020/01/12/lIoWvR.jpg)
 ~~~
+![lIoWvR.jpg](https://s2.ax1x.com/2020/01/12/lIoWvR.jpg)
 
 ### matplotlib图例
 
