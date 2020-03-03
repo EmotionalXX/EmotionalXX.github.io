@@ -34,7 +34,7 @@ tags:
 	
 ## 算法思路
 
-![QYHIoQ.jpg](https://s2.ax1x.com/2019/12/07/QYHIoQ.jpg)
+![3hujgO.jpg](https://s2.ax1x.com/2020/03/03/3hujgO.jpg)
 
 ## 算法结论
 
