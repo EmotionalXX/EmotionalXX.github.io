@@ -5,7 +5,7 @@ title:      [AI工程师]
 subtitle:   对抗检测
 date:       2020-02-20
 author:     Mr.Huang
-header-img: img/2020.2.20.jpg
+header-img: img/2020.03.03.jpg
 catalog: true
 tags:
     - 对抗检测
