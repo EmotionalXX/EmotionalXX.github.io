@@ -48,6 +48,15 @@ tags:
 我的理解是检测器f2错误识别为干净样本，检测器f2放行,故与原文中的‘it tends to recognize them all
 as adversarials’相悖。
 
+## 解惑
+
+感谢作者的悉心回答，我对迷惑之处有了大致的想法：
+
+我认为文章主要疑惑的数据为{X_test^adv(f2)} 和 {X_test^adv(f1)}^adv(f2).前者的实验测得数据为→0，而后者测得数据为→1。
+我们以手写识别数字分类器为例，其f2 label为0（干净样本），f1 label为‘1’（手写体为数字1），此时对f2进行对抗攻击，使其f2 label→**1**，但是我们识别的是针对f1的对抗样本，所以→0，说明是识别为干净样本的准确率，即大部分是识别为对抗样本，这对二分器的性能来说并没有影响。此外第二个数据指标说明，二分类器具有第二轮对抗攻击的鲁棒性，即无法制作对抗样本使其fool f1 and dypass f2.
+
+再次感谢作者 Zhitao Gong
+
 # 结语
 
  > 本文首次发布于 [Mr.Huang Blog](http://www.huangsz.xyz), 作者 [@(Mr.Huang)](http://github.com/EmotionalXX) ,转载请保留原文链接.
